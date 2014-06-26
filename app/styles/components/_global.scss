@@ -4,7 +4,7 @@
 *
 **/
 
-*, *::before, *::after {
+* {
   @include prefixr(box-sizing, border-box);
 }
 
@@ -56,4 +56,31 @@ pre {
       margin-right: -25.9%;
     }
   }
+}
+#instafeed {
+  margin: 3em 0;
+  .tile {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #222;
+    @media only screen and (min-width: 480px) {
+      width: 50%;
+    }
+    @media only screen and (min-width: 768px) {
+      width: 33.33%;
+    }
+    img {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+html, body, main {
+  background-color: #222 !important;
 }

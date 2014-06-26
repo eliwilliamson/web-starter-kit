@@ -7,7 +7,7 @@
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at
  *
- *    http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  *  Unless required by applicable law or agreed to in writing, software
  *  distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,31 +16,13 @@
  *  limitations under the License
  *
  */
+
 (function () {
-  'use strict';
-
-  var querySelector = document.querySelector.bind(document);
-
-  var navdrawerContainer = querySelector('.navdrawer-container');
-  var appbarElement = querySelector('.app-bar');
-  var menuBtn = querySelector('.menu');
-  var main = querySelector('main');
-
-  function closeMenu() {
-    appbarElement.classList.remove('open');
-    navdrawerContainer.classList.remove('open');
-  }
-
-  function toggleMenu() {
-    appbarElement.classList.toggle('open');
-    navdrawerContainer.classList.toggle('open');
-  }
-
-  main.addEventListener('click', closeMenu);
-  menuBtn.addEventListener('click', toggleMenu);
-  navdrawerContainer.addEventListener('click', function (event) {
-    if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
-      closeMenu();
-    }
-  });
+    var feed = new Instafeed({
+        get: 'user',
+        userId: 1407586555,
+        accessToken: '1407586555.467ede5.b264a093e3104e52aaa6d3da05e00ef7',
+        template: '<div class="tile"><img src="{{image}}" /></div>'
+    });
+    feed.run();
 })();
