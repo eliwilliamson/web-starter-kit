@@ -22,7 +22,8 @@
         get: 'user',
         userId: 1407586555,
         accessToken: '1407586555.467ede5.b264a093e3104e52aaa6d3da05e00ef7',
-        template: '<div class="tile"><img src="{{image}}" /></div>'
+        template: '<div class="tile"><img src="{{image}}" /></div>',
+        resolution: 'standard_resolution'
     });
     feed.run();
 })();
