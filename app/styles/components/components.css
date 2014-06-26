@@ -1279,6 +1279,14 @@ html, body, main {
   top: 0;
   margin: 0;
 }
+@media only screen and (max-width: 619px) {
+  .featured-spotlight__img img {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -o-opacity: 0;
+    opacity: 0;
+  }
+}
 @media only screen and (min-width: 620px) {
   .featured-spotlight__img img {
     max-width: none;
