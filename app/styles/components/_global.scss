@@ -13,13 +13,21 @@ html, body, button {
   font-smoothing: antialiased;
 }
 
+main {
+  @include medium-only {
+    padding-top: 1em !important;
+  }
+  @include small-only {
+    padding-top: 1em !important;
+  }
+}
+
 body {
   font-family: $fontDefault;
   font-size: $fontBase;
   line-height: 1.6250em; /* 26px */
   font-weight: 300; // to thicken it a bit, we need to remove font-smoothing
   color: $colorText;
-
   @include baseline-grid();
 }
 
@@ -58,7 +66,12 @@ pre {
   }
 }
 #instafeed {
-  margin: 3em 0;
+  margin: 3em 0 0 0;
+
+  @include small-only {
+    margin-top: 1em;
+  }
+
   .tile {
     margin: 0;
     padding: 0;
